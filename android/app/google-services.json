@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "233789321109",
+    "project_id": "aspire0912",
+    "storage_bucket": "aspire0912.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233789321109:android:593c30a4ec3b410711d09c",
+        "android_client_info": {
+          "package_name": "com.airesumebuilderapp.aspire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARBmwHJYIo0UJsJXfMPg13a7P42J9K5aE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

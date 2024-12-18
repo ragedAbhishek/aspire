@@ -7,6 +7,7 @@ import 'package:aspire/BuildingBlocks/skills.dart';
 import 'package:aspire/Extras/conts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:page_transition/page_transition.dart';
@@ -88,8 +89,8 @@ class _ProfileState extends State<Profile> {
     setState(() {
       isGenerating = true;
     });
-    final model =
-        GenerativeModel(model: 'gemini-pro', apiKey: GEMINI_AI_API_KEY);
+    final model = GenerativeModel(
+        model: 'gemini-pro', apiKey: dotenv.env['GEMINI_AI_API_KEY']!);
 
     final prompt = QUERY_INPUT;
     final content = [Content.text(prompt)];

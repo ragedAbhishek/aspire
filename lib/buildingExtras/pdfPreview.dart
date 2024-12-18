@@ -5,7 +5,6 @@ import 'package:aspire/BuildingBlocks/Educations.dart';
 import 'package:aspire/BuildingBlocks/Experience.dart';
 import 'package:aspire/BuildingBlocks/Projects.dart';
 import 'package:aspire/BuildingBlocks/skills.dart';
-import 'package:aspire/Extras/conts.dart';
 import 'package:aspire/ResumeCodes/resume10Ten.dart';
 import 'package:aspire/ResumeCodes/resume4Four.dart';
 import 'package:aspire/ResumeCodes/resume2Two.dart';
@@ -22,6 +21,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pdf/pdf.dart';
@@ -352,7 +352,7 @@ class _PdfPreviewPageState extends State<PdfPreviewPage> {
                 GestureDetector(
                     onTap: () {
                       var options = {
-                        'key': RAZORPAY_KEY,
+                        'key': dotenv.env['RAZORPAY_KEY'],
                         'amount': (((widget.details[2] -
                                         ((widget.details[2] / 100) *
                                             discountPercent)) +
